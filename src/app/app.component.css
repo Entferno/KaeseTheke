@@ -1,0 +1,15 @@
+body {
+    display: flex;
+    background-color: yellow;
+    justify-content: center;
+    text-align: center;
+}
+
+h1 {
+
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 200px;
+}
+
