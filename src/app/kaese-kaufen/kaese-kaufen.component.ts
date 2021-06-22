@@ -16,13 +16,15 @@ export class KaeseKaufenComponent implements OnInit {
 
   }
 
-  private käseUrl ='lager';
+  private käseUrl ='produkt';
 
 
 getKäse(){
 
   return this.http.get(this.käseUrl).subscribe(x => {
 
+
+    
     this.testKaese = x;
   });
 
@@ -30,17 +32,5 @@ getKäse(){
 
 
 
-käse = [
-  {title: "Erdbeerkäse", date: new Date(2021, 5, 25), geschmack: "lecker"
-},
-
-{title: "Stinkekäse", date: new Date(2021, 5, 25), geschmack: "richtig lecker"
-},
-
-
-{title: "Schablettenkäse", date: new Date(2021, 5, 25), geschmack: " sehr lecker"
-}
-
-];
 
 }

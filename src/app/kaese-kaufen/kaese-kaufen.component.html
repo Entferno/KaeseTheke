@@ -1,1 +1,19 @@
-{{testKaese}}
+<h1>Hier Kann man lecker Käse kaufen</h1>
+
+
+<table class="Käseauswahl">
+    <thead>
+        <tr>
+           <th>Name</th>
+           <th>Preis</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let x of testKaese">
+
+            <td><a routerLink="/app-kontakt" routerLinkActive="active">{{x.name}}</a></td>
+            <td>{{x.preis}}</td>
+        </tr>
+    </tbody>
+</table>
+

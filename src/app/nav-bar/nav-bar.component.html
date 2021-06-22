@@ -2,23 +2,22 @@
 
 <header>
     <div id="käse">
-        <a href="#">
+        <a routerLink="app-startseite" routerLinkActive="active">
             <img src="assets/images/käse.png">
         </a>
     </div>
 
     <nav>
     <ul>
-        <li><a routerLink="/app-kaese-kaufen" routerLinkActive="active">Käse kaufen</a></li>
-        <li><a href ="#info">Käse informieren</a></li>
-        <li><a href ="#rate">Käse bewerten</a></li>
-        <li><a href ="#alles">Käse alles</a></li>
+        <li><a routerLink="/app-kaese-kaufen" routerLinkActive="active">Käseauswahl</a></li>
+        <li><a routerLink="#info">Auf große Käsereise</a></li>
+        <li><a routerLink="/app-konto" routerLinkActive="active">Mein Käse Konto</a></li>
+        <li><a routerLink="/app-kontakt" routerLinkActive="active">Kontakt</a></li>
     </ul>
     </nav>
 </header>
 
 
-
-    <router-outlet></router-outlet>
+<router-outlet></router-outlet>
 
 

@@ -9,22 +9,8 @@ const { ConsoleReporter } = require('jasmine');
   app.use(express.static(path.join(__dirname, '/dist/my-new-angular-app')));  
  
  // application -------------------------------------------------------------
-  app.get('/käse', function(req,res) 
- {   
 
-       käse = [
-              {title: "Erdbeerkäse", date: new Date(2021, 5, 25),
-            }
-            ]
-            
-            res.send(käse); 
-                  
- });
- 
- // listen (start app with node server.js) ======================================
-
- app.get('/lager', function(req,res) 
-{
+mySQLConnect = function(res, queue){
 
        var con = mysql.createConnection({
               database: "21_DB_Gruppe6",
@@ -32,31 +18,48 @@ const { ConsoleReporter } = require('jasmine');
               port: "20133",
               user: "21_DB_Grp_6",
               password: "MpmQP?.EEQ*i=TOaHIytf2$d\\6ni#onG"
-       });
+      
+      });
 
-       con.connect(function(err)
-       {
-              if(err) throw (err);
-              console.log("Connected");
+      con.connect(function(err)
+      {
+             if(err) throw (err);
+             console.log("Connected");
 
-              con.query("SELECT * FROM 21_DB_Gruppe6.produkt",
-                     function(error, results, fields){
-                            console.log(results);
-                            res.send(results);
-                            con.end(function(err)
-                            {
-                                   if(err) throw(err);
-                                   console.log("Tschüss");
+             con.query(queue,
+                    function(error, results, fields){
+                           if(error) throw(error);
+                           console.log(results);
+                       
+                           res.send(results);                         
+                           con.end(function(err)
+                           {
+                                  if(err) throw(err);
+                                  console.log("Tschüss");
 
-                            });
-                     
-                     }
-              );
-       });
+                           });
+                    
+                    }
+             );
+      });
+}
 
 
+ 
+ // listen (start app with node server.js) ======================================
+
+ app.get('/produkt', function(req,res) 
+{
+
+       mySQLConnect(res, "SELECT * FROM 21_DB_Gruppe6.produkt")
 
 });
+
+
+
+
+
+
 
 
 
