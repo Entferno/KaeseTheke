@@ -15,11 +15,24 @@ h1 {
 
 table {
     width: 100%;
+    text-align: center;
+    vertical-align: middle
 }
 
 table, th, td {
     border: 1px solid black;
-    margin-left: 30px;
-    margin-right: 30px;
+    padding: 8px;
 }
+
+thead th {
+    width: 25%;
+  }
+
+  thead {
+    background-color: #333;
+    color: rgb(255, 174, 0);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 2%;
+  }
 

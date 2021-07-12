@@ -124,9 +124,9 @@ app.post('/newuser', function(req, res){
       {
              if(err) throw err;
              console.log("leitung läuft");
-             console.log(req.body.username, req.body.passwort, req.body.adress, req.body.email)
+             console.log(req.body.username, req.body.passwort, req.body.adresse, req.body.email)
              var sql = 'INSERT INTO 21_DB_Gruppe6.user (user.username, user.passwort, user.adresse, user.email) VALUES ( ?, ?, ?, ?)';
-             con.query(sql, [req.body.username, req.body.passwort, req.body.adress, req.body.email], function(err,result)
+             con.query(sql, [req.body.username, req.body.passwort, req.body.adresse, req.body.email], function(err,result)
              {
                     if(err) throw err;
                     res.send(result);
@@ -155,8 +155,8 @@ app.put('/user', function(req, res)
        {
               if(err) throw err;
               console.log("leitung läuft");
-              var sql = 'UPDATE 21_DB_Gruppe6.user SET username = ? , passwort = ?, email = ?, adress = ? WHERE username like ?';
-              con.query(sql, [req.body.username, req.body.passwort, req.body.passwort, req.body.adress], function(err,result)
+              var sql = 'UPDATE 21_DB_Gruppe6.user SET username = ? , passwort = ?, email = ?, adresse = ? WHERE username like ?';
+              con.query(sql, [req.body.username, req.body.passwort, req.body.passwort, req.body.adresse], function(err,result)
               {
                      if(err) throw err;
                      res.send(result);

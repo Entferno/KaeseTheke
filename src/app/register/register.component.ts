@@ -14,7 +14,7 @@ export class RegisterComponent implements OnInit {
   public username: string;
   public passwort: string;
   public email   : string;
-  public adress  : string;
+  public adresse  : string;
 
   json: any;
 
@@ -30,7 +30,7 @@ export class RegisterComponent implements OnInit {
        u1: this.username,
        p1: this.passwort,
        e1: this.email,
-       a1: this.adress
+       a1: this.adresse
     }
 
     var neuerUser = new User(body.u1, body.p1, body.a1 ,body.e1);
