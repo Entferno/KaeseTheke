@@ -8,7 +8,10 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { KaeseKaufenComponent } from './kaese-kaufen/kaese-kaufen.component';
 import { StartseiteComponent } from './startseite/startseite.component';
 import { KontoComponent } from './konto/konto.component';
-import { KontaktComponent } from './kontakt/kontakt.component';
+import { FormsModule,ReactiveFormsModule  } from '@angular/forms';
+import { RegisterComponent } from './register/register.component';
+import { LoggedinComponent } from './loggedin/loggedin.component';
+
 
 @NgModule({
   declarations: [
@@ -17,12 +20,15 @@ import { KontaktComponent } from './kontakt/kontakt.component';
     KaeseKaufenComponent,
     StartseiteComponent,
     KontoComponent,
-    KontaktComponent
+    RegisterComponent,
+    LoggedinComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

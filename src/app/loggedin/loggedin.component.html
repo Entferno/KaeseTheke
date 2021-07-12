@@ -1,0 +1,32 @@
+<body>
+
+    <h1>Hier sind die aktuellen Daten deines Käse Kontos</h1>
+
+    <table class="Userdaten">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Passwort</th>
+                <th>eMail</th>
+                <th>Adresse</th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let x of users">
+                <td>{{x.username}}</td>
+                <td>{{x.passwort}}</td>
+                <td>{{x.email}}</td>
+                <td>{{x.adress}}</td>
+                <td style="background-color: #ff6b6b;" (click)="deleteUser(x.username)" id="delete">x</td>
+            </tr>
+
+        </tbody>    
+    </table>
+
+
+
+
+
+</body>

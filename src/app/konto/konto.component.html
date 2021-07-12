@@ -1,1 +1,26 @@
-<h1>Das hier ist mein Konto</h1>
+<html>
+<body class="text-center">
+        <form class="form-signin">
+      
+        <h1 class="h3 mb-3 fw-normal">Willkommen in der Käsefamilie!</h1>
+    
+        <div class="form-floating">
+          <input [(ngModel)]="username" type="text" class="form-control" name="username" id="floatingInput" >
+          <label for="floatingInput">Benutzername</label>
+        </div>
+        <div class="form-floating">
+          <input [(ngModel)]="passwort" type="text" class="form-control" name="password" id="floatingPassword">
+          <label for="floatingPassword">Passwort</label>
+          <p id="warning">{{message}}</p>
+        </div>
+        <button class="w-100 btn btn-lg btn-primary" (click)="einloggen()">Und los geht's!</button>
+      </form>
+
+      <p>Noch kein Loch im Käse? Dann registriere Dich hier!<p>
+        <a routerLink="/app-register" routerLinkActive="active">Registrieren</a>
+
+    
+    
+        
+      </body>
+    </html>

@@ -20,14 +20,9 @@ export class KaeseKaufenComponent implements OnInit {
 
 
 getKäse(){
-
-  return this.http.get(this.käseUrl).subscribe(x => {
-
-
-    
+  return this.http.get(this.käseUrl).subscribe(x => {   
     this.testKaese = x;
   });
-
 }
 
 

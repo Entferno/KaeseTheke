@@ -1,0 +1,36 @@
+<html>
+    <body>
+        <form class="form-register">
+            <label>
+              <p class="label-txt">ENTER YOUR EMAIL</p>
+              <input [(ngModel)]="email" type="email" class="form-control" name="email" >
+              <div class="line-box">
+                <div class="line"></div>
+              </div>
+            </label>
+            <label>
+              <p class="label-txt">ENTER YOUR USERNAME</p>
+              <input [(ngModel)]="username" class="form-control" name="username" >
+              <div class="line-box">
+                <div class="line"></div>
+              </div>
+            </label>
+            <label>
+              <p class="label-txt">ENTER YOUR PASSWORD</p>
+              <input [(ngModel)]="passwort" type="password" class="form-control" name="passwort" >
+              <div class="line-box">
+                <div class="line"></div>
+              </div>
+            </label>
+            <label>
+              <p class="label-txt">ENTER YOUR ADRESS</p>
+              <input [(ngModel)]="adress" class="form-control" name="adress" >
+              <div class="line-box">
+                <div class="line"></div>
+              </div>
+            </label>
+            <button type="submit" (click)="registrieren()">Voll knorke, dass du dabei bist!</button>
+          </form>
+
+    </body>
+</html>
