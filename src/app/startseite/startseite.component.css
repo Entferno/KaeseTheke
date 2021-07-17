@@ -5,12 +5,3 @@ h1 {
     justify-content: center;
     margin-top: 200px;
 }
-
-body {
-    display: flex;
-    background-color: yellow;
-    justify-content: center;
-    text-align: center;
-    background-image: url('/assets/images/käse-background.jpg');
-    background-size: cover;
-}

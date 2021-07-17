@@ -18,7 +18,7 @@ export class KaeseKaufenComponent implements OnInit {
 
   private käseUrl ='produkt';
 
-
+//api abfrage zum holen der produkte
 getKäse(){
   return this.http.get(this.käseUrl).subscribe(x => {   
     this.testKaese = x;

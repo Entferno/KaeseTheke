@@ -33,7 +33,8 @@ export class KontoComponent implements OnInit {
 
   
 
-
+  //User wird anhand des Usernames aus der Datenbank geholt und in Variable gespeichert - anhand dieser wird dann das Passwort verglichen(weist Sicherheitslücken auf)
+  //Messages bei fehlerhafter Eingabe
    einloggen(){
      if(this.username == ""){
        this.message = "Du musst schon einen Nutzername eingeben";

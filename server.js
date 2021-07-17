@@ -52,21 +52,19 @@ mySQLConnect = function(res, queue){
 
  // listen (start app with node server.js) ======================================
 
+
+
+//gibt alle produkte aus
  app.get('/produkt', function(req,res) 
 {
        mySQLConnect(res, "SELECT * FROM 21_DB_Gruppe6.produkt")
 
 });
 
+//gibt alle user aus
 app.get('/user', function(req,res) 
 {
        mySQLConnect(res, "SELECT * FROM 21_DB_Gruppe6.user")
-
-});
-
-app.get('/lager', function(req,res) 
-{
-       mySQLConnect(res, "SELECT * FROM 21_DB_Gruppe6.lager")
 
 });
 
@@ -139,6 +137,8 @@ app.post('/newuser', function(req, res){
 
 });
 
+//nicht implemtierte Datenbankabfrag für das Updaten von Werten in der Datenbank
+
 app.put('/user', function(req, res)
 {
        var con = mysql.createConnection({
@@ -167,6 +167,8 @@ app.put('/user', function(req, res)
 
 });
 
+
+//der zu löschende User wird durch den Username gefunden und demenstprechend aus der Datenbank gelöscht
 
 app.delete('/user/:username', function(req, res)
 {
